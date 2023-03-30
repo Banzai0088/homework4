@@ -1,80 +1,54 @@
 ﻿// // See https://aka.ms/new-console-template for more information
 // Console.WriteLine("Hello, World!");
+
 // Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
-// int numberA = ReadInt("Введите число A: ");
-// int numberB = ReadInt("Введите число B: ");
-// ToDegree(numberA, numberB);  	 
-// // Функция возведения в степень
-// void ToDegree(int a, int b)
+// Console.WriteLine("Введите число A:");
+// int numberA = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число B:");
+// int numberB= Convert.ToInt32(Console.ReadLine());
+
+// int sqt = 1;
+// for(int i = 1; i<=numberB;i++)
 // {
-// int result = 1;
-// for (int i = 1; i <= b; i++)
-// {
-// result = result * a;
+//   sqt=sqt* numberA; 
 // }
-// Console.WriteLine(result);
-// }
- 	 
-// // Функция ввода
-// int ReadInt(string message)
-// {
-// Console.WriteLine(message);
-// return Convert.ToInt32(Console.ReadLine());
-// }
+// Console.WriteLine(sqt);
+
 // Задача 27: Напишите программу, которая принимает
 //  на вход число и выдаёт сумму цифр в числе.
 // 452 -> 11
 // 82 -> 10
 // 9012 -> 12
-// int number = ReadInt("Введите число: ");
-// int len = NumberLen(number);
-// SumNumbers(number, len);
-// // Функция подсчета цифр в числе
-// int NumberLen(int a)
-// {
-// int index = 0;
-// while (a > 0)
-// {
-// a /= 10;
-// index++;
-// }
-// return index;
-// }
-// // Функция вывода суммы цифр в числе
-// void SumNumbers(int n, int len)
-// {
+
+// Console.WriteLine ("Введите число: ");
+// string num = Console.ReadLine();
+
 // int sum = 0;
-// for (int i = 1; i <= len; i++)
-// {
-// sum += n % 10;
-// n /= 10;
-// }
-// Console.WriteLine($"сумма цифр {sum}");
-// }
-// // Функция ввода
-// int ReadInt(string message)
-// {
-// Console.Write(message);
-// return Convert.ToInt32(Console.ReadLine());
+
+//  for (int i=0; i<num.Length; i++)
+//  {
+//     string str = Convert.ToString(num[i]);
+//     int num1=Convert.ToInt32(str);
+ 
+//  sum=sum+num1;
+//  }
+//  Console.WriteLine (sum);
+
 // Задача 29: Напишите программу, которая задаёт массив из 8 элементов 
-// и выводит их на экран.
+// и выводит их на экран
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
-// int lenArray = ReadInt("Введите длинну массива: ");
- 
-// int[] randomArray = new int[lenArray];
-// for (int i = 0; i < randomArray.Length; i++)
+
+// int [] GetArray()
 // {
-//     randomArray[i] = new Random().Next(1,9);
-//     Console.Write(randomArray[i] + " ");
-// }
- 
-// // Функция ввода
-// int ReadInt(string message)
+// int[] array = new int[8];
+// for (int i = 0; i < array.Length; i++)
 // {
-//     Console.Write(message);
-//     return Convert.ToInt32(Console.ReadLine());
+//    array[i] = new Random().Next(1,9);
 // }
+// return array;
+// }
+//  Console.Write(String.Join (" ", GetArray()));
